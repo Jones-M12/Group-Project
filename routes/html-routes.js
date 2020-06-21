@@ -29,15 +29,6 @@ module.exports = function(app){
       
   });
 
-  app.get("/signup", function(req,res){
-      if(req.isAuthenticated()){
-          res.redirect("/member");
-      }else{
-         res.render("login"); 
-      }
-      
-  });
-
   app.get("/member", function(req,res){
       if(req.isAuthenticated()){
           res.redirect("/member");

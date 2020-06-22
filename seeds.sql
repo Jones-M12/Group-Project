@@ -1,16 +1,17 @@
 --Specifies the Database to insert information into
 USE myfoodfriend;
 
-CREATE TABLE foods (
-  id INT NOT NULL AUTO_INCREMENT,
-  foodName VARCHAR(45) NOT NULL,
-  measurment INT NULL,
-  unitOfMeasurment VARCHAR(10) NULL
-  calories INT NOT NULL,
-  PRIMARY KEY (id)
-);
+--MySQL Table Reference--> Used as a visual to create Foods Sequelize table Structure
+-- CREATE TABLE foods (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   foodName VARCHAR(45) NOT NULL,
+--   measurment INT NULL,
+--   unitOfMeasurment VARCHAR(10) NULL
+--   calories INT NOT NULL,
+--   PRIMARY KEY (id)
+-- );
 
--- Data ti be inserted into the Foods table
+-- Data to be inserted into the Foods table
 INSERT INTO smoothies
 (foodName, measurment, unitOfMeasurment, calories);
 VALUES

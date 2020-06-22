@@ -4,6 +4,8 @@ const router = require("express").Router();
 // Requiring our custom middleware for checking if a user is logged in
 // const isAuthenticated = require("../config/middleware/isAuthenticated");
 
+
+//Setup routes to Handlebar Pages
 module.exports = function(app){
 
   app.get("/", function(req,res){

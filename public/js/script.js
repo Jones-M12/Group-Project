@@ -1,3 +1,6 @@
+//Side Nav JavaScript--> Used in member.handlebars
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, options);

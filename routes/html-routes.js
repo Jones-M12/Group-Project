@@ -30,11 +30,8 @@ module.exports = function(app){
   });
 
   app.get("/member", function(req,res){
-      if(req.isAuthenticated()){
-          res.redirect("/member");
-      }else{
-         res.render("member"); 
-      }
+           res.render("member"); 
+      
       
   });
 

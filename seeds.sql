@@ -10,7 +10,7 @@ CREATE TABLE foods (
   PRIMARY KEY (id)
 );
 
-
+-- Data ti be inserted into the Foods table
 INSERT INTO smoothies
 (foodName, measurment, unitOfMeasurment, calories);
 VALUES

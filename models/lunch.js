@@ -1,8 +1,22 @@
 module.exports = function(sequelize, DataTypes) {
-    var Lunch = sequelize.define("Lunch", {
+    var Foods = sequelize.define("Lunch", {
       foodName: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      measurment: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        validate: {
+          len: [1]
+        }
+      },
+      unitOfMeasurment: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
         validate: {
           len: [1]
         }
@@ -16,5 +30,5 @@ module.exports = function(sequelize, DataTypes) {
       },
      
     });
-    return Lunch;
+    return Foods;
   };

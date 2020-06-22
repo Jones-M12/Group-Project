@@ -44,10 +44,29 @@
                 
                     <div class="row">
                         <ul>
-                            banana
+                         {{#each Foods}}
+                            <div class="col-md-6-text-left"></div>
+                                <pre>{{this.id}}. {{this.foodName}}. {{this.measurment}}. {{this.unitOfMeasurment}}. {{this.calories}}. </pre>
+                            </div>
+                            <div class="col-md-3 text-center">
+					            <form class="bEdit button-size">
+						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
+						            <button type="submit" class="btn btn-default"><i class="material-icons">create</i></button>                                    
+					            </form>
+				            </div>
+                            <div class="col-md-3 text-center">
+					            <form class="delBtn button-size">
+						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
+						            <button id= "delete-food"type="click" class="btn btn-default"><i class="material-icons">delete_forever</i></button>                                    
+					            </form>
+				            </div>
+                        {{/each}}   
                         </ul> 
                     <div class="input-field col s6">
-                        <button class="add-btn btn  grey darken-1" style="display: inline;"><i class="fa fa-plus"></i> Add Meal</button>
+                        <form class="searchItem button-size"></form>
+                            <input class="food_name" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
+                            <button id="bAdd" type="submit" class="add-btn btn grey darken-1" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                        </form>
                     </div>
                     <div class="input-field col s6">
                         <!-- Calorie Count -->
@@ -74,7 +93,7 @@
                             banana
                         </ul> 
                     <div class="input-field col s6">
-                        <button class="add-btn btn  grey darken-1" style="display: inline;"><i class="fa fa-plus"></i> Add Meal</button>
+                        <button id="lAdd" class="add-btn btn  grey darken-1" style="display: inline;"><i class="fa fa-plus"></i> Add Meal</button>
                     </div>
                     <div class="input-field col s6">
                         <!-- Calorie Count -->
@@ -101,7 +120,7 @@
                             banana
                         </ul> 
                     <div class="input-field col s6">
-                        <button class="add-btn btn  grey darken-1" style="display: inline;"><i class="fa fa-plus"></i> Add Meal</button>
+                        <button id="bAdd" class="add-btn btn  grey darken-1" style="display: inline;"><i class="fa fa-plus"></i> Add Meal</button>
                     </div>
                     <div class="input-field col s6">
                         <!-- Calorie Count -->

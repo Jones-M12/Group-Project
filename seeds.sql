@@ -12,7 +12,7 @@ USE myfoodfriend;
 -- );
 
 -- Data to be inserted into the Foods table
-INSERT INTO smoothies
+INSERT INTO Foods
 (foodName, measurment, unitOfMeasurment, calories);
 VALUES
 ("Banana", 1, "md", 110),

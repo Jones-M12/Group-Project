@@ -8,7 +8,7 @@ $(document).ready(() => {
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".searchItem").on("click", function(event) {
+  $("#bAdd").on("click", function(event) {
     var food_name = $(this).children(".food_name").val();
     console.log(food_name);
     

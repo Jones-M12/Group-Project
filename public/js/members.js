@@ -39,11 +39,11 @@ $(function() {
     // var id = $(this).data("id");
 
     // Send the DELETE request.
-    $.ajax("/api/foods/" , {
+    $.ajax("/api/meals/" , {
       method: "DELETE",
       data: {
-      foodName: delete_item,
-      mealName: "breakfast"
+      id: delete_item,
+      
       }
     }).then(
       function() {

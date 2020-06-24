@@ -60,13 +60,15 @@ module.exports = function(app) {
     });
   
     //Route to delete an item
-    app.delete("/api/foods", function(req, res) {
-        db.Food.destroy({
-          where: {
-            foodName: req.params.foodName
-          },  
-        }).then(function(dbFood) {
-        res.json(dbFood);
-        });
+    app.delete("/api/meals/", function(req, res) {
+      db.Meal.destroy({
+            where: {
+              id: req.body.id
+            },  
+          }).then(function(results) {
+          res.json(results);
+          });
       });
   };
+
+  

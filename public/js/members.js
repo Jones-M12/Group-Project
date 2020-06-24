@@ -29,6 +29,48 @@ $(function() {
     );
   });
 
+  $(".lunchSearchItem").on("submit", function(event) {
+    var lunchItem = $(this).children(".lunchItem").val();
+    console.log(lunchItem);
+    
+
+    // Send the PUT request.
+    $.ajax("/api/meals/" ,  {
+      method: "POST",
+      data: {
+        foodName: lunchItem,
+        mealName: "lunch"
+      }
+    }).then(
+      function() {
+        console.log("Food Item Added");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+  $(".dinnerSearchItem").on("submit", function(event) {
+    var dinnerItem = $(this).children(".dinnerItem").val();
+    console.log(dinnerItem);
+    
+
+    // Send the PUT request.
+    $.ajax("/api/meals/" ,  {
+      method: "POST",
+      data: {
+        foodName: dinnerItem,
+        mealName: "dinner"
+      }
+    }).then(
+      function() {
+        console.log("Food Item Added");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
   
 
   $(".delBtn").on("click", function(event) {
@@ -54,4 +96,18 @@ $(function() {
     );
   });
 });
+
+//Format to create the current day displayed on the calendar
+
+
+var currentMoment= function() { 
+  var now = moment().format('LLLL');
+console.log(currentMoment);
+
+$("#currentDay").text(now)
+}
+currentMoment()
+setInterval(currentMoment, 60000)
+
+
 

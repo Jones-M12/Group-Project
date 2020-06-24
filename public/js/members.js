@@ -8,15 +8,18 @@ $(document).ready(() => {
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $("#bAdd").on("click", function(event) {
+  $(".searchItem").on("submit", function(event) {
     var food_name = $(this).children(".food_name").val();
     console.log(food_name);
     
 
     // Send the PUT request.
-    $.ajax("/api/foods/" + foodName, {
-      method: "PUT",
-      
+    $.ajax("/api/meals/" ,  {
+      method: "POST",
+      data: {
+        foodName: food_name,
+        mealName: "breakfast"
+      }
     }).then(
       function() {
         console.log("Food Item Added");
@@ -28,15 +31,23 @@ $(function() {
 
   
 
-  $("#delete-food").on("click", function(event) {
-    var id = $(this).data("id");
+  $(".delBtn").on("click", function(event) {
+    // event.preventDefault();
+    // event.stopPropagation();
+    var delete_item = $(this).children(".delete_item").val();
+    console.log(delete_item);
+    // var id = $(this).data("id");
 
     // Send the DELETE request.
-    $.ajax("/api/foods/" + id, {
-      method: "DESTROY"
+    $.ajax("/api/foods/" , {
+      method: "DELETE",
+      data: {
+      foodName: delete_item,
+      mealName: "breakfast"
+      }
     }).then(
       function() {
-        console.log("deleted food item", id);
+        console.log("deleted food item");
         // Reload the page to get the updated list
         location.reload();
       }

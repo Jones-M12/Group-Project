@@ -5,7 +5,7 @@
 // Dependencies
 // =============================================================
 
-// Requiring our Todo model
+// Requiring our models
 const db = require("../models");
 
 // Routes
@@ -14,13 +14,30 @@ module.exports = function(app) {
     /* db.Foods gives access to the Foods model */
   // GET route for getting all of the Foods
     app.get("/api/foods/:id", (req, res) => {
-        db.Foods.findOne({
+        db.Foods.findAll({
             where: {
               id: req.params.id
             },            
           }).then(function(dbFood) {
             res.json(dbFood);
           });      
+    });
+
+    app.post("/api/meals", (req, res) => {
+      db.Foods.findOne({
+        where: {
+          foodName: req.body.foodName
+        },            
+      }).then(function(dbFood) {
+        console.log(dbFood)
+        db.Meal.create({
+          FoodId: dbFood.id,
+          mealName: req.body.mealName,        
+        }).then(function(results) {
+          // `results` here would be the newly created chirp
+          res.end();
+        });
+      });
     });
   
      
@@ -43,13 +60,13 @@ module.exports = function(app) {
     });
   
     //Route to delete an item
-    app.delete("/api/foodss/:id", function(req, res) {
+    app.delete("/api/foods", function(req, res) {
         db.Food.destroy({
           where: {
-            id: req.params.id
-          }
+            foodName: req.params.foodName
+          },  
         }).then(function(dbFood) {
-          res.json(dbFood);
+        res.json(dbFood);
         });
       });
   };

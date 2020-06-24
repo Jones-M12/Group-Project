@@ -34,7 +34,7 @@
 
 
 
-        <!-- Break Container -->
+        <!-- Breakfast Container -->
         <div class="container">
             <!-- Form Card -->
             <div class="card">
@@ -42,37 +42,49 @@
                 <div class="card-content">
                     <span class="card-title">Breakfast</span>
                 
+                    <div class="col-md-6 text-center" class="task">
                     <div class="row">
+                        
                         <ul>
-                         {{#each Foods}}
-                            <div class="col-md-6-text-left"></div>
-                                <pre>{{this.id}}. {{this.foodName}}. {{this.measurment}}. {{this.unitOfMeasurment}}. {{this.calories}}. </pre>
+                         {{#each breakfast}}
+                            <div class="col s6">
+                                <pre>{{this.id}}. {{this.Food.dataValues.foodName}}. {{this.Food.dataValues.measurment}}. {{this.Food.dataValues.unitOfMeasurment}}. {{this.Food.dataValues.calorieAmount}}. </pre>
                             </div>
-                            <div class="col-md-3 text-center">
+                            <div class="col s3">
 					            <form class="bEdit button-size">
-						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
-						            <button type="submit" class="btn btn-default"><i class="material-icons">create</i></button>                                    
+						            {{!-- <input input type="hidden" class="food_id" type="text" value={{this.id}}><br> --}}
+						            <button type="submit" class="btn btn-default"><i class="material-icons">create</i>Edit</button>                                    
 					            </form>
 				            </div>
-                            <div class="col-md-3 text-center">
+                            <div class="col s3">
 					            <form class="delBtn button-size">
-						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
-						            <button id= "delete-food"type="click" class="btn btn-default"><i class="material-icons">delete_forever</i></button>                                    
+						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}">
+						            <button id= "delete-food" type="click" class="btn btn-default"><i class="material-icons">delete_forever</i>Delete</button>                                    
 					            </form>
 				            </div>
                         {{/each}}   
-                        </ul> 
-                    <div class="input-field col s6">
-                        <form class="searchItem button-size"></form>
-                            <input class="food_name" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
-                            <button id="bAdd" type="submit" class="add-btn btn grey darken-1" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
-                        </form>
+                        </ul>
+
                     </div>
-                    <div class="input-field col s6">
-                        <!-- Calorie Count -->
-                        <h5 class="right-align">Total Calories: <span class="total-calories">0</span></h5>
-                  </div>   
+                    </div>
+                        
+                    <div class="col-md-6 text-center" class="task">
+                    <div class="row">  
+
+                        <div class="input-field col s6 ">
+                            <form class="searchItem button-size">
+                                <input class="food_name left align" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
+                                <button id="bAdd" type="submit" class="add-btn btn grey darken-1" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                            </form>
+                        </div>
+                        <div class="input-field col s6">
+                            <!-- Calorie Count -->
+                            <h5 class="right-align">Total Calories: <span class="total-calories">0</span></h5>
+                        </div>
+                           
                   </div>
+                </div>
+
                   <!-- End Card Content -->
               </div>
               <!-- End Card-->

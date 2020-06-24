@@ -20,7 +20,7 @@
             <li><a href="#!"><i class="material-icons">person_pin_circle</i>Friends</a></li>
             <li><a href="/logout"><i class="material-icons">rotate_left</i>Logout</a></li>
         </ul>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="medium material-icons">menu</i></a>
         <!--End Side Nav Bar -->
 
         <!--Welcome message -->
@@ -55,13 +55,18 @@
                             <div class="col s3">
 					            <form class="bEdit button-size">
 						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
-						            <button type="submit" class="btn btn-default"><i class="material-icons">create</i>Edit</button>                                    
+						            <button type="click" class="dropdown-trigger btn grey darken-1" href='#' data-target='dropdown1'><i class="material-icons">create</i>Edit</button> 
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">Move to Lunch</a></li>
+                                        <li class="divider" tabindex="-1"></li>
+                                        <li><a href="#!">Move to Dinner</a></li>                                        
+                                    </ul>                                   
 					            </form>
 				            </div>
                             <div class="col s3">
 					            <form class="delBtn button-size">
 						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}"><br>
-						            <button id= "delete-food" type="click" class="btn btn-default"><i class="material-icons">delete_forever</i>Delete</button>                                    
+						            <button id= "delete-food" type="click" class="btn btn-default grey darken-1"><i class="material-icons">delete_forever</i>Delete</button>                                    
 					            </form>
 				            </div>
                         {{/each}}   
@@ -76,7 +81,7 @@
                         <div class="input-field col s6 ">
                             <form class="searchItem button-size">
                                 <input class="food_name left align" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
-                                <button id="bAdd" type="submit" class="add-btn btn grey darken-1" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                                <button id="bAdd" type="submit" class="add-btn btn light-blue accent-3" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
                             </form>
                         </div>
                         <div class="input-field col s6">
@@ -113,18 +118,23 @@
                             <div class="col s3">
 					            <form class="bEdit button-size">
 						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
-						            <button type="submit" class="btn btn-default"><i class="material-icons">create</i>Edit</button>                                    
+						            <button type="click" class="dropdown-trigger btn grey darken-1" href='#' data-target='dropdown1'><i class="material-icons">create</i>Edit</button> 
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">Move to Breakfast</a></li>
+                                        <li class="divider" tabindex="-1"></li>
+                                        <li><a href="#!">Move to Dinner</a></li>                                        
+                                    </ul>                                     
 					            </form>
 				            </div>
                             <div class="col s3">
 					            <form class="delBtn button-size">
 						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}"><br>
-						            <button id= "delete-food" type="click" class="btn btn-default"><i class="material-icons">delete_forever</i>Delete</button>                                    
+						            <button id= "delete-food" type="click" class="btn btn-default grey darken-1"><i class="material-icons">delete_forever</i>Delete</button>                                    
 					            </form>
 				            </div>
                         {{/each}}   
                         </ul>
-
+                        
                     </div>
                     </div>
                         
@@ -134,7 +144,7 @@
                         <div class="input-field col s6 ">
                             <form class="lunchSearchItem button-size">
                                 <input class="lunchItem left align" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
-                                <button id="bAdd" type="submit" class="add-btn btn grey darken-1" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                                <button id="bAdd" type="submit" class="add-btn btn light-blue accent-3" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
                             </form>
                         </div>
                         <div class="input-field col s6">
@@ -171,13 +181,18 @@
                             <div class="col s3">
 					            <form class="bEdit button-size">
 						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
-						            <button type="submit" class="btn btn-default"><i class="material-icons">create</i>Edit</button>                                    
+						            <button type="click" class="dropdown-trigger btn grey darken-1" href='#' data-target='dropdown1'><i class="material-icons">create</i>Edit</button> 
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">Move to Breakfast</a></li>
+                                        <li class="divider" tabindex="-1"></li>
+                                        <li><a href="#!">Move to Lunch</a></li>                                        
+                                    </ul>                                    
 					            </form>
 				            </div>
                             <div class="col s3">
 					            <form class="delBtn button-size">
 						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}"><br>
-						            <button id= "delete-food" type="click" class="btn btn-default"><i class="material-icons">delete_forever</i>Delete</button>                                    
+						            <button id= "delete-food" type="click" class="btn btn-default grey darken-1"><i class="material-icons">delete_forever</i>Delete</button>                                    
 					            </form>
 				            </div>
                         {{/each}}   
@@ -192,7 +207,7 @@
                         <div class="input-field col s6 ">
                             <form class="dinnerSearchItem button-size">
                                 <input class="dinnerItem left align" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
-                                <button id="bAdd" type="submit" class="add-btn btn grey darken-1" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                                <button id="bAdd" type="submit" class="add-btn btn light-blue accent-3" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
                             </form>
                         </div>
                         <div class="input-field col s6">

@@ -16,11 +16,14 @@ A user can better keep track of their diet and calorie count.
 ​
 ## User Story
 ​
--As a USER.
+ As a USER.
+ ​
+
+ I WANT to be able to enter my meals troughout the day, my calorie count, save them and delete my entries if need be.
+ 
 ​
--I WANT to be able to enter my meals troughout the day, my calorie count, save them and delete my entries if need be.
-​
--SO THAT I can keep track of what I'm eating. 
+ SO THAT I can keep track of what I'm eating. 
+ 
 ​
 ## Development
 ​

@@ -32,16 +32,22 @@ We have designed the backend application using Express, sequelize and the MySQL.
 ## Future Development
 ​
 AS a USER.
+
 ​
 I WANT to be able to edit previous entries.
+
 ​
-SO THAT I can make changes to my meals when need be. 
+SO THAT I can make changes to my meals when need be.
+
 ​
 AS a USER
+
 ​
 I WANT TO enter my weight goals, my progress, steps and add friends
+
 ​
 SO THAT I can keep track of my overall progress.
+
 ​
 ## Contact Information
 ​

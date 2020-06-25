@@ -9,6 +9,8 @@
               <a href="#name"><span class="white-text name">John Doe</span></a>
               <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
             </div></li>
+            <li><p id="currentDay" class="lead center align"></p></li>
+            <li><div class="divider"></div></li>
             <li><a href="#!"><i class="material-icons">phonelink_setup</i>Setting</a></li>
             <li><div class="divider"></div></li>
             <li><a href="#!"><i class="material-icons">home</i>Home</a></li>
@@ -18,7 +20,7 @@
             <li><a href="#!"><i class="material-icons">person_pin_circle</i>Friends</a></li>
             <li><a href="/logout"><i class="material-icons">rotate_left</i>Logout</a></li>
         </ul>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="medium material-icons">menu</i></a>
         <!--End Side Nav Bar -->
 
         <!--Welcome message -->
@@ -52,14 +54,19 @@
                             </div>
                             <div class="col s3">
 					            <form class="bEdit button-size">
-						            {{!-- <input input type="hidden" class="food_id" type="text" value={{this.id}}><br> --}}
-						            <button type="submit" class="btn btn-default"><i class="material-icons">create</i>Edit</button>                                    
+						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
+						            <button type="click" class="dropdown-trigger btn grey darken-1" href='#' data-target='dropdown1'><i class="material-icons">create</i>Edit</button> 
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">Move to Lunch</a></li>
+                                        <li class="divider" tabindex="-1"></li>
+                                        <li><a href="#!">Move to Dinner</a></li>                                        
+                                    </ul>                                   
 					            </form>
 				            </div>
                             <div class="col s3">
 					            <form class="delBtn button-size">
-						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}">
-						            <button id= "delete-food" type="click" class="btn btn-default"><i class="material-icons">delete_forever</i>Delete</button>                                    
+						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}"><br>
+						            <button id= "delete-food" type="click" class="btn btn-default grey darken-1"><i class="material-icons">delete_forever</i>Delete</button>                                    
 					            </form>
 				            </div>
                         {{/each}}   
@@ -74,7 +81,7 @@
                         <div class="input-field col s6 ">
                             <form class="searchItem button-size">
                                 <input class="food_name left align" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
-                                <button id="bAdd" type="submit" class="add-btn btn grey darken-1" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                                <button id="bAdd" type="submit" class="add-btn btn light-blue accent-3" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
                             </form>
                         </div>
                         <div class="input-field col s6">
@@ -100,18 +107,54 @@
                 <div class="card-content">
                     <span class="card-title">Lunch</span>
                 
+                    <div class="col-md-6 " class="task">
                     <div class="row">
+                        
                         <ul>
-                            banana
-                        </ul> 
-                    <div class="input-field col s6">
-                        <button id="lAdd" class="add-btn btn  grey darken-1" style="display: inline;"><i class="fa fa-plus"></i> Add Meal</button>
+                         {{#each lunch}}
+                            <div class="col s6">
+                                <pre>{{this.id}}. {{this.Food.dataValues.foodName}}. {{this.Food.dataValues.measurment}}. {{this.Food.dataValues.unitOfMeasurment}}. {{this.Food.dataValues.calorieAmount}}. </pre>
+                            </div>
+                            <div class="col s3">
+					            <form class="bEdit button-size">
+						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
+						            <button type="click" class="dropdown-trigger btn grey darken-1" href='#' data-target='dropdown1'><i class="material-icons">create</i>Edit</button> 
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">Move to Breakfast</a></li>
+                                        <li class="divider" tabindex="-1"></li>
+                                        <li><a href="#!">Move to Dinner</a></li>                                        
+                                    </ul>                                     
+					            </form>
+				            </div>
+                            <div class="col s3">
+					            <form class="delBtn button-size">
+						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}"><br>
+						            <button id= "delete-food" type="click" class="btn btn-default grey darken-1"><i class="material-icons">delete_forever</i>Delete</button>                                    
+					            </form>
+				            </div>
+                        {{/each}}   
+                        </ul>
+                        
                     </div>
-                    <div class="input-field col s6">
-                        <!-- Calorie Count -->
-                        <h5 class="right-align">Total Calories: <span class="total-calories">0</span></h5>
-                  </div>   
+                    </div>
+                        
+                    <div class="col-md-6 text-center" class="task">
+                    <div class="row">  
+
+                        <div class="input-field col s6 ">
+                            <form class="lunchSearchItem button-size">
+                                <input class="lunchItem left align" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
+                                <button id="bAdd" type="submit" class="add-btn btn light-blue accent-3" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                            </form>
+                        </div>
+                        <div class="input-field col s6">
+                            <!-- Calorie Count -->
+                            <h5 class="right-align">Total Calories: <span class="total-calories">0</span></h5>
+                        </div>
+                           
                   </div>
+                </div>
+
                   <!-- End Card Content -->
               </div>
               <!-- End Card-->
@@ -127,18 +170,54 @@
                 <div class="card-content">
                     <span class="card-title">Dinner</span>
                 
+                    <div class="col-md-6 text-center" class="task">
                     <div class="row">
+                        
                         <ul>
-                            banana
-                        </ul> 
-                    <div class="input-field col s6">
-                        <button id="bAdd" class="add-btn btn  grey darken-1" style="display: inline;"><i class="fa fa-plus"></i> Add Meal</button>
+                         {{#each dinner}}
+                            <div class="col s6">
+                                <pre>{{this.id}}. {{this.Food.dataValues.foodName}}. {{this.Food.dataValues.measurment}}. {{this.Food.dataValues.unitOfMeasurment}}. {{this.Food.dataValues.calorieAmount}}. </pre>
+                            </div>
+                            <div class="col s3">
+					            <form class="bEdit button-size">
+						            <input input type="hidden" class="food_id" type="text" value={{this.id}}><br>
+						            <button type="click" class="dropdown-trigger btn grey darken-1" href='#' data-target='dropdown1'><i class="material-icons">create</i>Edit</button> 
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">Move to Breakfast</a></li>
+                                        <li class="divider" tabindex="-1"></li>
+                                        <li><a href="#!">Move to Lunch</a></li>                                        
+                                    </ul>                                    
+					            </form>
+				            </div>
+                            <div class="col s3">
+					            <form class="delBtn button-size">
+						            <input type="hidden" class="delete_item" type="text" value= "{{this.id}}"><br>
+						            <button id= "delete-food" type="click" class="btn btn-default grey darken-1"><i class="material-icons">delete_forever</i>Delete</button>                                    
+					            </form>
+				            </div>
+                        {{/each}}   
+                        </ul>
+
                     </div>
-                    <div class="input-field col s6">
-                        <!-- Calorie Count -->
-                        <h5 class="right-align">Total Calories: <span class="total-calories">0</span></h5>
-                  </div>   
+                    </div>
+                        
+                    <div class="col-md-6 text-center" class="task">
+                    <div class="row">  
+
+                        <div class="input-field col s6 ">
+                            <form class="dinnerSearchItem button-size">
+                                <input class="dinnerItem left align" type="text" placeholder="Add Item" id="search-item" value={{this.foodName}}>
+                                <button id="bAdd" type="submit" class="add-btn btn light-blue accent-3" style="display: inline;"><i class="material-icons">add_box</i>Submit</button>
+                            </form>
+                        </div>
+                        <div class="input-field col s6">
+                            <!-- Calorie Count -->
+                            <h5 class="right-align">Total Calories: <span class="total-calories">0</span></h5>
+                        </div>
+                           
                   </div>
+                </div>
+
                   <!-- End Card Content -->
               </div>
               <!-- End Card-->
@@ -148,4 +227,6 @@
 
         <!--Script Tags -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script type="text/javascript" src="js/members.js"></script>

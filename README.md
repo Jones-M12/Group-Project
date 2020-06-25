@@ -2,9 +2,9 @@
 ​
 [![Generic Badge](https://img.shields.io/badge/VERSION-1.1.0-BLUE.svg)](https://shields.io/)
 ​
-[Repo: Notes Application](https://github.com/Jones-M12/MyFoodFriend.git)
+[Repo: MyFoodFriend Application](https://github.com/Jones-M12/MyFoodFriend.git)
 ​
-[Deployed Site: MyFoodFriend Application](https://notes-application-jones.herokuapp.com/)
+[Deployed Site: MyFoodFriend Application](https://myfoodfriend.herokuapp.com/)
 ​
 ## Overview
 ​

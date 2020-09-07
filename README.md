@@ -59,7 +59,7 @@ SO THAT I can better operate the application.
 * Support weight input and tracking
 * Clean up functionality 
 * Add connect with friends functionality
- 
+* Support food search for input field (current foods are preprogram using seeds file, but does not auto populate upon entering food)
 
 ​## Contact Information
 ​

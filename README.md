@@ -1,4 +1,4 @@
-# Group-Project My Food Friend Application
+# Group-Project: My Food Friend Application
 ​
 [![Generic Badge](https://img.shields.io/badge/VERSION-1.1.0-BLUE.svg)](https://shields.io/)
 ​
@@ -26,30 +26,60 @@ A user can better keep track of their diet and calorie count.
  
 ​
 ## Development
+
+Full stack web application.
 ​
 We have designed the backend application using Express, sequelize and the MySQL. For the front end we used JavaScript, JQuery and Materialize for our styling. 
+
+* Signup with email and password.
+
+* Click Sign Up, this redirect user to member page.
+
+* The user email will display at the top of the page.
+
+![signup](./public/assets/foodfriend-signup.gif)
+
+* Members can add and delete food for each category.
+
+![foodadd](./public/assets/foodfriend-add.gif)
+
+* Click the hamburher menu to see other options.
+
+* Click Lougout to exit the application.
+
+![navbar](./public/assets/foodfriend-navbar.gif)
+
+
 ​
 ## Future Development
 ​
 AS a USER.
 
-​
 I WANT to be able to edit previous entries.
-
 ​
 SO THAT I can make changes to my meals when need be.
 
 ​
-AS a USER
-
+AS a USER.
 ​
-I WANT TO enter my weight goals, my progress, steps and add friends
+I WANT TO enter my weight goals, my progress, steps and add friends.
 
-​
 SO THAT I can keep track of my overall progress.
 
-​
-## Contact Information
+
+AS a USER.
+
+I WANT TO have a better user experience & functionality.
+
+SO THAT I can better operate the application.
+
+* Add edit feature
+* Support weight input and tracking
+* Clean up functionality 
+* Add connect with friends functionality
+* Support food search for input field (current foods are preprogram using seeds file, but does not auto populate upon entering food)
+
+​## Contact Information
 ​
 * Name: Malesha Jones
 * Github: [Jones-M12](https://github.com/Jones-M12)

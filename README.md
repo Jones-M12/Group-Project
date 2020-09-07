@@ -31,6 +31,24 @@ Full stack web application.
 ​
 We have designed the backend application using Express, sequelize and the MySQL. For the front end we used JavaScript, JQuery and Materialize for our styling. 
 
+* Signup with email and password.
+
+* Click Sign Up, this redirect user to member page.
+
+* The user email will display at the top of the page.
+
+![signup](./public/assets/foodfriend-signup.gif)
+
+* Members can add and delete food for each category.
+
+![foodadd](./public/assets/foodfriend-add.gif)
+
+* Click the hamburher menu to see other options.
+
+* Click Lougout to exit the application.
+
+![navbar](./public/assets/foodfriend-navbar.gif)
+
 
 ​
 ## Future Development

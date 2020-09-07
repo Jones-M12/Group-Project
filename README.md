@@ -9,8 +9,10 @@
 ## Overview
 ​
 This application was designed to allow a user to utilize a calorie tracker application for managing their meals throughout the day. 
+
 ​
 It allows a user to keep track of their meals and their calorie count troughtout the day without having to keep a handwritten journal.
+
 ​
 A user can better keep track of their diet and calorie count.
 ​
